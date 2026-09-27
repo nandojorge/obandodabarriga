@@ -243,3 +243,61 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #08
   .purchase-art:before{width:36px;height:36px;left:0;top:0}
   .schools-inner:after{width:34px;height:34px;right:20px;top:-15px}
 }
+
+
+/* 2026-09-27: improve photographic colour and purchase card on tablet/mobile. */
+.author-photo{
+  filter:brightness(1.06) saturate(1.06) contrast(.96);
+}
+.schools-image{
+  filter:brightness(1.12) saturate(1.12) contrast(.92);
+}
+@media (max-width:1000px) and (min-width:761px){
+  .purchase{padding:54px 0 64px}
+  .purchase-grid{
+    grid-template-columns:minmax(190px,.72fr) 1.28fr;
+    gap:38px;
+    padding:46px 48px;
+    align-items:center;
+  }
+  .purchase-art img{width:min(100%,235px)}
+  .purchase-copy h2{font-size:36px;line-height:1.08}
+  .purchase-copy .body-large{font-size:17px}
+}
+@media (max-width:760px){
+  .purchase{padding:40px 0 56px}
+  .purchase-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+    padding:30px 24px 32px;
+    border-radius:28px;
+    text-align:left;
+  }
+  .purchase-art{
+    display:flex;
+    justify-content:center;
+  }
+  .purchase-art img{
+    width:min(58vw,220px);
+    margin:0 auto;
+    transform:rotate(-2deg);
+  }
+  .purchase-copy h2{
+    font-size:clamp(30px,8vw,38px);
+    line-height:1.08;
+  }
+  .purchase-copy .body-large{
+    font-size:17px;
+    margin-top:10px;
+  }
+  .purchase-copy .button{margin-top:20px}
+  .purchase-copy .micro{
+    font-size:12px;
+    line-height:1.45;
+    margin-top:14px;
+  }
+}
+@media (max-width:420px){
+  .purchase-grid{padding:26px 20px 28px}
+  .purchase-art img{width:min(64vw,200px)}
+}
