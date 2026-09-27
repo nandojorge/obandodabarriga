@@ -41,3 +41,119 @@ main[tabindex="-1"]:focus,
 main[tabindex="-1"]:focus-visible{
   outline:none;
 }
+
+
+/* Footer with stronger brand character. */
+.footer{
+  border-top:0;
+  padding:34px 0 26px;
+  background:linear-gradient(180deg,var(--paper) 0%,#f2fbf8 100%);
+}
+.footer-card{
+  position:relative;
+  display:grid;
+  grid-template-columns:1.1fr 1.5fr auto;
+  align-items:center;
+  gap:34px;
+  padding:34px 38px;
+  background:#eaf8f3;
+  border-radius:28px;
+  overflow:hidden;
+}
+.footer-card:before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  left:-85px;
+  bottom:-90px;
+  border:2px solid rgba(18,157,178,.12);
+  border-radius:50%;
+}
+.footer-card:after{
+  content:"";
+  position:absolute;
+  width:54px;
+  height:54px;
+  right:18px;
+  top:10px;
+  background:url('assets/decor-star.webp') center/contain no-repeat;
+  opacity:.45;
+  transform:rotate(12deg);
+}
+.footer-brand-block{position:relative;z-index:1}
+.footer .brand{width:148px}
+.footer-tagline{
+  margin:12px 0 0;
+  max-width:240px;
+  font-size:18px;
+  line-height:1.25;
+  font-weight:900;
+  color:var(--blue-dark);
+}
+.footer .footer-links{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:repeat(2,max-content);
+  gap:10px 28px;
+  margin:0;
+  width:auto;
+  font-size:13px;
+}
+.footer .footer-links a{opacity:.9}
+.footer .footer-links a:hover{color:var(--blue-dark)}
+.footer-cta{
+  position:relative;
+  z-index:1;
+  min-height:44px;
+  padding-inline:22px;
+  white-space:nowrap;
+  box-shadow:none;
+}
+.footer-bottom{
+  margin-top:14px;
+  padding-top:16px;
+}
+@media(max-width:900px){
+  .footer-card{
+    grid-template-columns:1fr auto;
+  }
+  .footer .footer-links{
+    grid-column:1 / -1;
+    order:3;
+  }
+}
+@media(max-width:620px){
+  .footer{
+    padding-top:24px;
+  }
+  .footer-card{
+    grid-template-columns:1fr;
+    gap:22px;
+    padding:28px 24px;
+    border-radius:24px;
+  }
+  .footer-card:after{
+    width:42px;
+    height:42px;
+    right:14px;
+    top:12px;
+  }
+  .footer .brand{width:138px}
+  .footer-tagline{
+    font-size:20px;
+    max-width:260px;
+  }
+  .footer .footer-links{
+    grid-column:auto;
+    grid-template-columns:1fr 1fr;
+    gap:12px 24px;
+  }
+  .footer-cta{
+    justify-self:start;
+  }
+  .footer-bottom{
+    padding-inline:2px;
+  }
+}
