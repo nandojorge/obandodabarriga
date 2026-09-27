@@ -110,19 +110,20 @@
 /* Author portrait, framed without changing the supplied image. */
 .author-photo{width:112px;height:auto;border-radius:12px;display:block}
 
-/* Official footer logo and an original illustration for the schools section. */
+/* Official footer logo and presentation photograph. */
 .footer .brand{display:block;width:130px;min-width:0;flex:0 0 auto;line-height:0}
 .footer .brand img{width:100%;height:auto}
-.schools-inner{display:grid;grid-template-columns:180px minmax(0,1fr) auto;gap:28px}
-.schools-image{display:block;width:180px;height:auto}
+.schools-inner{display:grid;grid-template-columns:320px minmax(0,1fr);gap:16px 32px}
+.schools-image{display:block;width:100%;height:auto;border-radius:16px;grid-row:1 / 3;align-self:center}
+.schools-inner>.text-link{grid-column:2;justify-self:start}
 @media(max-width:1000px){
-  .schools-inner{grid-template-columns:150px minmax(0,1fr);gap:18px 24px}
-  .schools-image{width:150px;grid-row:1 / 3;align-self:center}
+  .schools-inner{grid-template-columns:240px minmax(0,1fr);gap:18px 24px}
+  .schools-image{width:100%;grid-row:1 / 3;align-self:center}
   .schools-inner>.text-link{grid-column:2;justify-self:start}
 }
 @media(max-width:620px){
   .schools-inner{grid-template-columns:1fr;gap:18px}
-  .schools-image{width:min(100%,240px);grid-row:auto;justify-self:center}
+  .schools-image{width:100%;grid-row:auto;justify-self:center}
   .schools-inner>.text-link{grid-column:1}
   .author-photo{width:120px}
 }
