@@ -31,3 +31,6 @@
 
 /* Align question copy to the top of each card. */
 .question-tile>div{align-self:start}
+/* Speech bubbles from the supplied reference, excluding the girl. */
+.question-tile>.participation-bubbles{align-self:center;width:100%;height:155px;margin-top:15px;background:url('assets/participacao-baloes-referencia.png') 35.4% 32% / 700% auto no-repeat;clip-path:polygon(34% 0,100% 0,100% 100%,0 100%,0 48%,34% 43%)}
+.question-tile>.participation-bubbles{height:auto;aspect-ratio:120/137;background-size:723.333% 168.613%;background-position:35.294% 31.915%;clip-path:none}
