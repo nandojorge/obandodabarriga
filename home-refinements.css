@@ -178,3 +178,67 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #08
 .footer-bottom .publisher{margin:0;font-size:12px;font-weight:500;color:var(--ink)}
 .footer-bottom .legal-links{padding-top:0;font-size:12px}
 @media(max-width:620px){.footer-bottom{align-items:flex-start;flex-direction:column;gap:12px}}
+
+/* Lightweight decorative accents: no extra images or animation. */
+.bando-section .art-panel:after{
+  box-shadow:18px -11px 0 -1px #ffba22;
+}
+.rhythm-art:after{
+  content:"";position:absolute;pointer-events:none;
+  width:100px;height:43px;left:0;bottom:4%;
+  border:2px solid #f78b7f;border-top:0;border-right:0;
+  border-radius:0 0 0 100%;transform:rotate(-12deg);
+}
+.purchase-art{position:relative;isolation:isolate}
+.purchase-art:before,.purchase-art:after{
+  content:"";position:absolute;pointer-events:none;z-index:-1;
+}
+.purchase-art:before{
+  width:5px;height:27px;left:-15px;top:5%;background:#eeaa21;
+  border-radius:5px;transform:rotate(-35deg);
+  box-shadow:17px -5px 0 -1px #eeaa21;
+}
+.purchase-art:after{
+  width:65px;height:65px;right:-16px;bottom:-12px;
+  border:1.5px solid rgba(8,127,152,.28);
+  border-left-color:transparent;border-top-color:transparent;
+  border-radius:50%;transform:rotate(-15deg);
+}
+.credits-grid{position:relative;isolation:isolate}
+.credits-grid:before{
+  content:"";position:absolute;pointer-events:none;
+  width:28px;height:8px;border-radius:50%;
+  background:#ffd77b;left:18px;top:-10px;transform:rotate(-35deg);
+}
+.schools-inner{position:relative;isolation:isolate}
+.schools-inner:after{
+  content:"";position:absolute;pointer-events:none;
+  width:74px;height:25px;right:25px;top:-13px;
+  border:1.5px solid #f1b947;border-bottom:0;
+  border-radius:50% 50% 0 0;transform:rotate(12deg);
+}
+@media(max-width:760px){
+  .rhythm-art:after{width:62px;height:28px;left:7%;bottom:0}
+  .purchase-art:before{left:3%;top:3%;height:22px}
+  .purchase-art:after{right:2%;width:45px;height:45px}
+  .schools-inner:after{width:52px;right:20px}
+}
+
+/* Original decorative artwork supplied for the book's visual identity. */
+.hero-art:before{width:48px;height:52px;right:7%;top:0;background: url('assets/decor-rays-right.webp') center/contain no-repeat;transform:rotate(-8deg);border-radius:0}
+.hero-art:after{display:none}
+.bando-section .art-panel:after{width:44px;height:44px;left:0;top:22%;background:url('assets/decor-rays-left.webp') center/contain no-repeat;box-shadow:none;transform:rotate(-12deg);border-radius:0}
+.intro:after{width:115px;height:270px;top:50px;right:max(48px,calc((100% - var(--max))/2 + 60px));background:url('assets/decor-ribbon.webp') center/contain no-repeat;border:0;border-radius:0;transform:rotate(-24deg)}
+.rhythm-art:after{width:44px;height:44px;left:5%;bottom:4%;background:url('assets/decor-heart.webp') center/contain no-repeat;border:0;border-radius:0;transform:rotate(-14deg)}
+.purchase-art:before{width:48px;height:48px;left:-15px;top:3%;background:url('assets/decor-rays-left.webp') center/contain no-repeat;box-shadow:none;border-radius:0;transform:rotate(-10deg);z-index:1}
+.purchase-art:after{display:none}
+.credits-grid:before{width:34px;height:34px;left:20px;top:-15px;background:url('assets/decor-star.webp') center/contain no-repeat;border-radius:0;transform:rotate(-15deg)}
+.schools-inner:after{width:44px;height:44px;right:24px;top:-19px;background:url('assets/decor-star.webp') center/contain no-repeat;border:0;border-radius:0;transform:rotate(14deg)}
+@media(max-width:760px){
+  .hero-art:before{width:36px;height:40px;right:6%}
+  .bando-section .art-panel:after{width:34px;height:34px}
+  .intro:after{display:none}
+  .rhythm-art:after{width:32px;height:32px;left:6%;bottom:0}
+  .purchase-art:before{width:36px;height:36px;left:0;top:0}
+  .schools-inner:after{width:34px;height:34px;right:20px;top:-15px}
+}
