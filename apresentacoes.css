@@ -125,3 +125,72 @@
     margin-left:28px;
   }
 }
+
+
+/* 2026-09-27 mobile refinement: compact question cards with image beside copy. */
+@media (max-width:620px){
+  .presentation-questions{
+    gap:12px;
+  }
+  .question-tile{
+    grid-template-columns:88px minmax(0,1fr);
+    column-gap:16px;
+    row-gap:0;
+    align-items:start;
+    padding:24px 18px 22px;
+    min-height:0;
+  }
+  .question-number{
+    top:14px;
+    left:14px;
+    width:30px;
+    height:30px;
+    font-size:19px;
+    z-index:2;
+  }
+  .question-tile>img,
+  .question-tile>.participation-bubbles{
+    grid-column:1;
+    grid-row:1;
+    width:82px;
+    height:104px;
+    max-width:82px;
+    margin:26px 0 0;
+    justify-self:center;
+    align-self:start;
+    object-fit:contain;
+  }
+  .question-tile>div:not(.participation-bubbles){
+    grid-column:2;
+    grid-row:1;
+    width:auto;
+    align-self:start;
+    padding-top:0;
+  }
+  .question-tile h3{
+    margin:0 0 8px;
+    font-size:19px;
+    line-height:1.16;
+  }
+  .question-tile p{
+    margin:0;
+    font-size:15.5px;
+    line-height:1.46;
+  }
+}
+@media (max-width:390px){
+  .question-tile{
+    grid-template-columns:76px minmax(0,1fr);
+    column-gap:14px;
+    padding:22px 16px 20px;
+  }
+  .question-tile>img,
+  .question-tile>.participation-bubbles{
+    width:70px;
+    height:92px;
+    max-width:70px;
+    margin-top:24px;
+  }
+  .question-tile h3{font-size:18px}
+  .question-tile p{font-size:15px}
+}
