@@ -16,3 +16,10 @@
 @media(max-width:700px){.presentation-hero{grid-template-columns:1fr;padding:38px 12px 50px;gap:32px}.presentation-hero h1{font-size:36px}.presentation-hero h1 br{display:initial}.presentation-hero-copy{padding:0}.presentation-hero .eyebrow{max-width:85%;font-size:10px}.presentation-hero>div:after{width:34px;height:40px;right:0;top:0}.presentation-hero .hero-photo{margin:0;width:100%;max-width:480px}.hero-photo .hero-event-photo{height:420px}.hero-photo .hero-friends{width:175px;height:140px;right:0;bottom:-28px}.hero-rays:after{right:0;bottom:100px}.hero-rays:before{right:0;width:32px}.presentation-essential{grid-template-columns:1fr;padding:28px 12px 36px;gap:0}.presentation-essential h2{font-size:30px}.presentation-essential>p{font-size:16px}}
 .moment-icon{clip-path:polygon(34% 0,100% 0,100% 100%,0 100%,0 17%,34% 17%)}
 @media(max-width:420px){.moment-grid{grid-template-columns:1fr}.moment-grid article{padding:0!important;border:0}.moment-icon{width:190px}}
+.moment-art{display:block;width:100%;height:170px;object-fit:contain;margin:8px 0 12px}
+@media(max-width:700px){.moment-art{height:150px}.moment-icon-2{height:auto;aspect-ratio:160/105}}
+@media(max-width:420px){.moment-art{width:210px;max-width:100%;height:185px}}
+.moment-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.moment-grid article{min-width:0}.moment-icon-2{height:170px;aspect-ratio:auto;background:none;clip-path:none;display:flex;align-items:center}.moment-icon-2:before{content:"";display:block;width:100%;aspect-ratio:160/105;background:url('assets/momentos-referencia.png') 36.52% 47.09% / 616.875% 443.81% no-repeat;clip-path:polygon(34% 0,100% 0,100% 100%,0 100%,0 17%,34% 17%)}
+@media(max-width:900px){.moment-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 0}.moment-grid article:nth-child(3){border:0;padding-left:0}.moment-grid article:nth-child(2){padding-right:0}}
+@media(max-width:700px){.moment-icon-2{height:150px}}
+@media(max-width:420px){.moment-grid{grid-template-columns:1fr}.moment-icon-2{height:185px}}
